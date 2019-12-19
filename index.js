@@ -175,20 +175,20 @@ class Instructor extends Lambdasian {
 
 this.specialty = attribute.specialty,
 this.favLanguage = attribute.favLanguage,
-this.catchPhrase = attribute.catchPhrase
+this.catchPhrase = attribute.catchPhrase,
 
   }
 
 demo(subject) {
 
-  return `Today we are learning about ${subject}`
+  return `Today we are learning about ${subject}`;
 
 
 }
 
 grade(student, subject) {
 
-  return `${student.name} receives a perfect score on ${subject}`
+  return `${student.name} receives a perfect score on ${subject}`;
 
 }
 
@@ -249,8 +249,21 @@ sprintChallenge(subject) {
         + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
-class ProjectManager {
-constructor(attributes)
+class ProjectManager extends Instructor{
+constructor(attributes){
+  super(attributes);
+
+  this.gradClassName = attributes.gradClassName
+  this.favInstructor = attributes.favInstructor
+
+}
+
+standup(channel){
+
+
+}
+
+debugCode ()
 
 }
 
