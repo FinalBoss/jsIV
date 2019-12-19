@@ -173,21 +173,21 @@ class Instructor extends Lambdasian {
   constructor (attribute) {
     super(attribute);
 
-this.specialty = attribute.specialty;
-this.favLanguage = attribute.favLanguage;
-this.catchPhrase = attribute.catchPhrase;
+this.specialty = attribute.specialty,
+this.favLanguage = attribute.favLanguage,
+this.catchPhrase = attribute.catchPhrase,
 
   }
 demo(subject) {
 
-  return `Today we are learning about ${attribute.subject}`
+  return `Today we are learning about ${subject}`
 
 
 }
 
 grade(student, subject) {
 
-  return `${student.name} receives a perfect score on ${attribute.subject}`
+  return `${student.name} receives a perfect score on ${subject}`
 
 }
 
@@ -209,6 +209,7 @@ grade(student, subject) {
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 class Student {
+  
 
 }
 
