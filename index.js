@@ -88,18 +88,33 @@ class Person {
 class Car {
 constructor(model, milesPerGallon) {
 
+this.model = model;
+this.milesPerGallon = milesPerGallon;
 this.tank = 0;
 this.odometer = 0;
+this.fulltank = 200;
 
 
+}
 
-} fill (gallons) {
+fill (gallons) {
 
-this.tank = ++gallons;
+this.tank = this.tank + gallons;
 
-} drive (distance) {
+}
+ drive (distance) {
 
-  
+  this.odometer = this.odometer + distance
+  this.tank = this.tank - (distance / this.milesPerGallon);
+
+
+if(this.tank < 0) {
+
+  this.tank = 0;
+  this.odometer = this.fulltank;
+ 
+  return `I ran out of fuel at ${this.odometer} miles!`
+};
 
 }
 
@@ -119,6 +134,23 @@ this.tank = ++gallons;
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
+constructor(attribute) {
+
+  this.name = attribute.name;
+  this.age = attribute.age;
+  this.location = attribute.location;
+
+
+} 
+speak() {
+
+
+
+  return `Hello my name is ${this.name}, I am from ${this.location}`
+
+
+}
+
 
 }
 
