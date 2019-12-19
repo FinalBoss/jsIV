@@ -152,8 +152,6 @@ speak() {
 }
 
 
-}
-
 /*
   TASK 4
     - Write an Instructor class extending Lambdasian.
@@ -165,19 +163,22 @@ speak() {
     - The constructor calls the parent constructor passing it what it needs.
     - The constructor should also initialize `specialty`, `favLanguage` and `catchPhrase` properties on the instance.
     - Instructor instances have the following methods:
-        + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
+        +
+}
+ `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
-class Instructor extends Lambdasian {
 
-  constructor (attribute) {
+class Instructor extends Lambdasian {
+  constructor (attribute){ 
     super(attribute);
 
 this.specialty = attribute.specialty,
 this.favLanguage = attribute.favLanguage,
-this.catchPhrase = attribute.catchPhrase,
+this.catchPhrase = attribute.catchPhrase
 
   }
+
 demo(subject) {
 
   return `Today we are learning about ${subject}`
@@ -208,8 +209,30 @@ grade(student, subject) {
         + `PRAssignment` a method that receives a subject as an argument and returns `student.name has submitted a PR for {subject}`
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
-class Student {
-  
+class Student extends Lambdasian {
+  constructor(attributes){
+      super(attributes);
+
+      this.previousBackgroud = attributes.previousBackgroud,
+      this.className = attributes.className,
+      this.favSubjects = attributes.favSubjects
+
+  }
+  listSubject(){
+
+    return  `Loving ${this.favSubjects}!`
+
+  }
+PRAssignment(subject){
+
+  return `${Student.name} has submitted a PR for ${subject}`
+
+}
+
+sprintChallenge(subject) {
+
+  return `${this.name} has begun sprint challenge on ${subject}`
+}
 
 }
 
@@ -227,6 +250,7 @@ class Student {
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 class ProjectManager {
+constructor(attributes)
 
 }
 
